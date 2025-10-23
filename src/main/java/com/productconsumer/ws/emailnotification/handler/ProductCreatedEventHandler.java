@@ -1,5 +1,6 @@
 package com.productconsumer.ws.emailnotification.handler;
 
+import com.products.ws.core.ProductCreatedEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaHandler;
@@ -16,6 +17,4 @@ public class ProductCreatedEventHandler {
     public void handle(ProductCreatedEvent productCreatedEvent) {
         LOGGER.info("Received a new event: " + productCreatedEvent.getTitle());
     }
-
-
 }
